@@ -1,5 +1,8 @@
 # Microglia3DOrganization
-ed.
+
+This repository contains the computational resources used for the three-dimensional analysis of microglial organization in the mouse cerebral cortex under physiological and Alzheimer's disease conditions.
+
+The project combines deep-learning-based image segmentation with quantitative analysis of microglial and amyloid-β plaque distributions in cleared brain tissue. The current version of the repository includes the trained BiaPy models and their configuration files. The MATLAB code used to extract quantitative data from the segmentations will be added once the analysis pipeline is finalized.
 
 ## Project overview
 
