@@ -1,4 +1,4 @@
-# Microglia3DOrganization
+# Microglia 3D Organization
 
 This repository contains the computational resources used for the three-dimensional analysis of microglial organization in the mouse cerebral cortex under physiological and Alzheimer's disease conditions.
 
