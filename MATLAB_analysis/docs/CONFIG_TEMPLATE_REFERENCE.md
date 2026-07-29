@@ -7,10 +7,8 @@ The pipeline accepts a MATLAB structure, a JSON file or a MAT file containing a 
 | File | Purpose |
 |---|---|
 | `config/presets/paper_metrics.json` | Metric selection used for the manuscript-oriented workflow |
-| `config/presets/all_metrics.json` | All standard and advanced metric groups; Voronoi execution still requires explicit activation |
-| `examples/paper_metrics_config.json` | Reusable paper metric-selection fragment |
+| `config/presets/all_metrics.json` | All standard and advanced metric groups; Voronoi analysis included |
 | `examples/config_template_full.json` | Complete editable configuration with every configurable field |
-| `examples/all_metrics_config.json` | Complete example enabling all available metric groups |
 | `examples/example_programmatic_config.m` | Example of building a configuration in MATLAB |
 
 For a reproducible paper-oriented run, copy `examples/config_template_full.json`, adapt paths and metadata mappings, and retain the `paper_metrics` metric section.
