@@ -1,0 +1,83 @@
+Function,File,Description
+analyzeGlobalImageData,analysis/global/analyzeGlobalImageData.m,% Optimized fast version of getDataLoop_function
+analyzeCorticalLayers,analysis/layers/analyzeCorticalLayers.m,% Get microglia density and volume data for different zones of the cortex column
+processCorticalLayerImage_v230,analysis/layers/processCorticalLayerImage_v230.m,PROCESSCORTICALLAYERIMAGE_V230 Calculate layer-specific results for one image.
+analyzeIndividualPlaques,analysis/plaques/analyzeIndividualPlaques.m,% Optimized fast version of getPlaqueInfo_function
+analyzeSphereData,analysis/spheres/analyzeSphereData.m,% Optimized and corrected version of the sphere-data script
+getJointData,analysis/spheres/getJointData.m,GETJOINTDATA Aggregate individual sphere metrics into image-level summary columns.
+getMetricCatalog,config/catalog/getMetricCatalog.m,"GETMETRICCATALOG Return descriptions, units, and grouping for output metrics."
+selectMetricPreset,config/catalog/selectMetricPreset.m,SELECTMETRICPRESET Build metric-selection fields from a named preset.
+createMicrogliaConfig,config/createMicrogliaConfig.m,CREATEMICROGLIACONFIG Create a complete pipeline configuration structure.
+createOutputStructure,config/createOutputStructure.m,CREATEOUTPUTSTRUCTURE Create the standardized result tree.
+configureMicrogliaAnalysisInteractive,config/interactive/configureMicrogliaAnalysisInteractive.m,CONFIGUREMICROGLIAANALYSISINTERACTIVE Create a configuration using MATLAB dialogs.
+loadMicrogliaConfig,config/loadMicrogliaConfig.m,LOADMICROGLIACONFIG Load MAT or JSON configuration.
+prepareDilatedPlaques,config/prepareDilatedPlaques.m,"PREPAREDILATEDPLAQUES Resolve existing, saved, temporary, or unused plaque dilation."
+prepareNormalizedMetadata,config/prepareNormalizedMetadata.m,PREPARENORMALIZEDMETADATA Create a temporary metadata table with standard names.
+saveMicrogliaConfig,config/saveMicrogliaConfig.m,SAVEMICROGLIACONFIG Save configuration as MAT and human-readable JSON.
+validateMicrogliaConfig,config/validation/validateMicrogliaConfig.m,"VALIDATEMICROGLIACONFIG Validate paths, metadata, numerical parameters, and dependencies."
+readStackTif,io/readStackTif.m,READSTACKTIF Read a multi-page TIFF while preserving the stored numeric type.
+writeStackTif,io/writeStackTif.m,WRITESTACKTIF Write a three-dimensional array as a multi-page TIFF file.
+getSphereFromCentroid,lib/geometry/getSphereFromCentroid.m,GETSPHEREFROMCENTROID Create a clipped 3-D spherical mask.
+sampleCSRinSphere,lib/geometry/sampleCSRinSphere.m,SAMPLECSRINSPHERE Sample points uniformly inside a three-dimensional sphere.
+volIntersectEqualSpheres,lib/geometry/volIntersectEqualSpheres.m,VOLINTERSECTEQUALSPHERES Compute overlap volume for two equal spheres.
+K3_trans_sphere,lib/spatial_statistics/K3_trans_sphere.m,K3_TRANS_SPHERE Estimate three-dimensional Ripley K with edge correction.
+choose_params_smallN,lib/spatial_statistics/choose_params_smallN.m,CHOOSE_PARAMS_SMALLN Select stable pair-correlation bins for small samples.
+csr_envelope_L,lib/spatial_statistics/csr_envelope_L.m,CSR_ENVELOPE_L Simulate a CSR envelope for the transformed Ripley statistic.
+csr_envelope_gr,lib/spatial_statistics/csr_envelope_gr.m,CSR_ENVELOPE_GR Simulate a CSR envelope for the pair-correlation function.
+gr_trans_sphere,lib/spatial_statistics/gr_trans_sphere.m,GR_TRANS_SPHERE Estimate g(r) in a spherical window with edge correction.
+percentiles,lib/spatial_statistics/percentiles.m,PERCENTILES Compute column-wise percentiles without additional toolboxes.
+getPlaqueDataFunction,metrics/density/getPlaqueDataFunction.m,"GETPLAQUEDATAFUNCTION Calculate image-level plaque counts, densities, and occupied volumes."
+computeDirectionalBiasSphere,metrics/directional/computeDirectionalBiasSphere.m,COMPUTEDIRECTIONALBIASSPHERE Quantify directional bias inside a sphere.
+depthSuperfMetrics,metrics/directional/depthSuperfMetrics.m,DEPTHSUPERFMETRICS Measure bias along deep and superficial directions.
+randomDirectionNull,metrics/directional/randomDirectionNull.m,RANDOMDIRECTIONNULL Build a null distribution from random directions.
+getAngularDistribution,metrics/radial/getAngularDistribution.m,GETANGULARDISTRIBUTION Calculate and optionally save angular point distributions inside a sphere.
+getRadialDistribution,metrics/radial/getRadialDistribution.m,GETRADIALDISTRIBUTION Calculate and optionally save the normalized radial point distribution.
+getRadioAndCenterNormalization,metrics/radial/getRadioAndCenterNormalization.m,GETRADIOANDCENTERNORMALIZATION Center sphere points and normalize coordinates by sphere radius.
+getCorrelationFunctionG,metrics/spatial_statistics/getCorrelationFunctionG.m,GETCORRELATIONFUNCTIONG Calculate the pair-correlation function and CSR envelopes for a sphere.
+getRipleyK3,metrics/spatial_statistics/getRipleyK3.m,GETRIPLEYK3 Calculate three-dimensional Ripley statistics and CSR envelopes for a sphere.
+getDistributionHist,metrics/voronoi/getDistributionHist.m,GETDISTRIBUTIONHIST Create and save a histogram from a discrete distribution.
+getDistributionsGraphs,metrics/voronoi/getDistributionsGraphs.m,GETDISTRIBUTIONSGRAPHS Generate Voronoi distribution summaries for one sphere or image region.
+getDistributionsGraphsLayers,metrics/voronoi/getDistributionsGraphsLayers.m,GETDISTRIBUTIONSGRAPHSLAYERS Generate Voronoi distribution summaries for a cortical layer.
+getVoronoiLayerData,metrics/voronoi/getVoronoiLayerData.m,GETVORONOILAYERDATA Select region-associated Voronoi cells and calculate summary statistics.
+getVoronoiSphereData,metrics/voronoi/getVoronoiSphereData.m,GETVORONOISPHEREDATA Select sphere-associated Voronoi cells and calculate summary statistics.
+extractInstanceCentroids,preprocessing/instances/extractInstanceCentroids.m,EXTRACTINSTANCECENTROIDS Calculate object centroids from a labeled 3-D image.
+generateDilatedPlaques,preprocessing/plaques/generateDilatedPlaques.m,DILATEPLAQUES_FUNCTION Expand plaque labels by a physical radius.
+fillWithNearestSpheres,preprocessing/spheres/fillWithNearestSpheres.m,FILLWITHNEARESTSPHERES Fill valid tissue with non-overlapping spheres selected by nearest feasible centers.
+generateSphereDefinitions,preprocessing/spheres/generateSphereDefinitions.m,% Optimized version of getSpheres_function
+runMicrogliaAnalysis,runMicrogliaAnalysis.m,RUNMICROGLIAANALYSIS Execute the configurable microglia analysis pipeline.
+setupMicrogliaAnalysis,setupMicrogliaAnalysis.m,SETUPMICROGLIAANALYSIS Add all project folders to the MATLAB search path.
+prepareDataTable,tables/prepareDataTable.m,PREPAREDATATABLE Initialize the image-level microglia result table.
+prepareDataTable_Plaques,tables/prepareDataTable_Plaques.m,PREPAREDATATABLE_PLAQUES Initialize the image-level plaque summary columns.
+prepareGlobalSphereDataTable,tables/prepareGlobalSphereDataTable.m,PREPAREGLOBALSPHEREDATATABLE Initialize the image-level sphere summary table.
+prepareIndividualNonPlaqueSphereDataTable,tables/prepareIndividualNonPlaqueSphereDataTable.m,PREPAREINDIVIDUALNONPLAQUESPHEREDATATABLE Initialize the result table for individual AD non-plaque spheres.
+prepareIndividualPlaqueSphereDataTable,tables/prepareIndividualPlaqueSphereDataTable.m,PREPAREINDIVIDUALPLAQUESPHEREDATATABLE Initialize the result table for plaque-centered spheres.
+prepareIndividualWTSphereDataTable,tables/prepareIndividualWTSphereDataTable.m,PREPAREINDIVIDUALWTSPHEREDATATABLE Initialize the result table for individual WT spheres.
+prepareJoinSphereDataTable,tables/prepareJoinSphereDataTable.m,PREPAREJOINSPHEREDATATABLE Initialize the joined image-level sphere summary table.
+prepareLayerDataTable,tables/prepareLayerDataTable.m,PREPARELAYERDATATABLE Initialize the result table for layer-specific microglia measurements.
+preparePlaqueDataTable,tables/preparePlaqueDataTable.m,PREPAREPLAQUEDATATABLE Initialize the result table for individual plaque measurements.
+preparePlaqueLayerDataTable,tables/preparePlaqueLayerDataTable.m,PREPAREPLAQUELAYERDATATABLE Initialize the result table for layer-specific plaque measurements.
+prepareSphere_PlaqueDataTable,tables/prepareSphere_PlaqueDataTable.m,PREPARESPHERE_PLAQUEDATATABLE Initialize the sphere-to-plaque relation result table.
+standardizeOutputTable,tables/standardizeOutputTable.m,STANDARDIZEOUTPUTTABLE Apply readable output names and explicit units.
+runAllTests,tests/runAllTests.m,RUNALLTESTS Run the repository regression tests.
+testKnownRegressions,tests/testKnownRegressions.m,TESTKNOWNREGRESSIONS Guard against previously reported code regressions.
+testLabelStorageType,tests/testLabelStorageType.m,TESTLABELSTORAGETYPE Verify automatic uint8/uint16 selection for label images.
+testLayerImageSelection,tests/testLayerImageSelection.m,"TESTLAYERIMAGESELECTION Verify all, Excel, manual, and normalized selection behavior."
+testLayerPlaqueColumnNames,tests/testLayerPlaqueColumnNames.m,TESTLAYERPLAQUECOLUMNNAMES Verify distinct microglia and plaque layer-volume names.
+testOutputStructure,tests/testOutputStructure.m,TESTOUTPUTSTRUCTURE Verify centralized data and derived-image folders.
+castLabelImageForStorage,utils/castLabelImageForStorage.m,CASTLABELIMAGEFORSTORAGE Cast a non-negative label image to uint8 or uint16.
+computeCorticalBorderX,utils/computeCorticalBorderX.m,COMPUTECORTICALBORDERX Extract the first tissue voxel along the X axis.
+emptyVoronoiSummary,utils/emptyVoronoiSummary.m,EMPTYVORONOISUMMARY Return NaN placeholders for disabled Voronoi metrics.
+getDistToBorderX,utils/getDistToBorderX.m,GETDISTTOBORDERX Measure cortical depth along X at the centroid Y-Z plane.
+getLayerInformationAvailability,utils/getLayerInformationAvailability.m,GETLAYERINFORMATIONAVAILABILITY Read normalized layer-eligibility metadata.
+getOutputModelName,utils/getOutputModelName.m,GETOUTPUTMODELNAME Convert input model labels to standardized output labels.
+getRegionContentPath,utils/getRegionContentPath.m,GETREGIONCONTENTPATH Build nested region/content output paths.
+getVoronoiTypeData,utils/getVoronoiTypeData.m,GETVORONOITYPEDATA Convert a config boundary mode to the legacy Voronoi mode.
+getZoneFromBorder,utils/getZoneFromBorder.m,GETZONEFROMBORDER Create a tissue region extending a specified distance from a binary border.
+isMetricGroupEnabled,utils/isMetricGroupEnabled.m,ISMETRICGROUPENABLED Return true when a metric group is enabled.
+mergeStructs,utils/mergeStructs.m,MERGESTRUCTS Recursively merge an override structure into a base structure.
+nextAvailableTableRow,utils/nextAvailableTableRow.m,"NEXTAVAILABLETABLEROW Return an empty table row, growing the table if required."
+parseLogicalFlag,utils/parseLogicalFlag.m,"PARSELOGICALFLAG Convert common logical, numeric, and text flags to logical values."
+removeColumnsByPattern,utils/removeColumnsByPattern.m,REMOVECOLUMNSBYPATTERN Remove table variables whose names contain a pattern.
+resolveLayerImageSelection,utils/resolveLayerImageSelection.m,RESOLVELAYERIMAGESELECTION Determine which metadata rows have valid layer information.
+safeDivide,utils/safeDivide.m,SAFEDIVIDE Divide safely and optionally scale the result.
+trimUnusedRows,utils/trimUnusedRows.m,TRIMUNUSEDROWS Remove unused rows from dynamically grown result tables.

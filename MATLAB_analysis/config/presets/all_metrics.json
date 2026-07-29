@@ -1,0 +1,115 @@
+{
+  "metrics": {
+    "preset": "all_metrics",
+    "selected": [
+      "microglia_count",
+      "microglia_density_cells_mm3",
+      "analyzed_volume_um3",
+      "plaque_count",
+      "plaque_density_plaques_mm3",
+      "plaque_occupied_fraction",
+      "plaque_volume_um3",
+      "associated_microglia_count",
+      "associated_microglia_density_cells_mm3",
+      "distance_to_cortical_surface_um",
+      "layer_volume_um3",
+      "layer_microglia_density_cells_mm3",
+      "layer_plaque_density_plaques_mm3",
+      "sphere_volume_um3",
+      "sphere_microglia_density_cells_mm3",
+      "nearest_plaque_distance_um",
+      "mean_pairwise_microglia_distance_um",
+      "mean_nearest_microglia_distance_um",
+      "mean_radial_distance",
+      "ripley_k3_deviation",
+      "pair_correlation_deviation",
+      "polarization",
+      "alignment",
+      "voronoi_valid_cell_count",
+      "voronoi_mean_neighbor_count",
+      "voronoi_mean_volume_um3",
+      "voronoi_mean_surface_area_um2",
+      "voronoi_mean_neighbor_distance_um"
+    ],
+    "groups": {
+      "globalMicroglia": {
+        "enabled": true,
+        "selected": [
+          "microglia_count",
+          "microglia_density_cells_mm3",
+          "analyzed_volume_um3"
+        ]
+      },
+      "globalPlaques": {
+        "enabled": true,
+        "selected": [
+          "plaque_count",
+          "plaque_density_plaques_mm3",
+          "plaque_occupied_fraction"
+        ]
+      },
+      "individualPlaques": {
+        "enabled": true,
+        "selected": [
+          "plaque_volume_um3",
+          "associated_microglia_count",
+          "associated_microglia_density_cells_mm3",
+          "distance_to_cortical_surface_um"
+        ]
+      },
+      "layers": {
+        "enabled": true,
+        "selected": [
+          "layer_volume_um3",
+          "layer_microglia_density_cells_mm3",
+          "layer_plaque_density_plaques_mm3"
+        ]
+      },
+      "spheres": {
+        "enabled": true,
+        "selected": [
+          "sphere_volume_um3",
+          "sphere_microglia_density_cells_mm3",
+          "nearest_plaque_distance_um"
+        ]
+      },
+      "distances": {
+        "enabled": true,
+        "selected": [
+          "mean_pairwise_microglia_distance_um",
+          "mean_nearest_microglia_distance_um"
+        ]
+      },
+      "radial": {
+        "enabled": true,
+        "selected": [
+          "mean_radial_distance"
+        ]
+      },
+      "spatialStatistics": {
+        "enabled": true,
+        "selected": [
+          "ripley_k3_deviation",
+          "pair_correlation_deviation"
+        ]
+      },
+      "directional": {
+        "enabled": true,
+        "selected": [
+          "polarization",
+          "alignment"
+        ]
+      },
+      "voronoi": {
+        "enabled": true,
+        "selected": [
+          "voronoi_valid_cell_count",
+          "voronoi_mean_neighbor_count",
+          "voronoi_mean_volume_um3",
+          "voronoi_mean_surface_area_um2",
+          "voronoi_mean_neighbor_distance_um"
+        ]
+      }
+    }
+  }
+}
