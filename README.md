@@ -415,15 +415,27 @@ These metrics can be selected interactively or enabled through `config/presets/a
 
 ## Voronoi analysis
 
-Voronoi analysis is disabled by default and is not part of the paper metric preset. When enabled through a custom configuration, the pipeline reads externally generated centroid and Voronoi result files and summarizes:
+Voronoi analysis is disabled by default and is not part of the paper metric preset.
 
-- valid Voronoi cell count;
-- number of neighbors;
-- cell volume;
-- cell surface area;
-- distance between neighboring seeds.
+A three-dimensional Voronoi tessellation provides a quantitative description of how microglial somas partition the analyzed tissue volume. In this approach, the centroid of each segmented microglial soma is used as a Voronoi seed. The tissue is then divided into regions so that every voxel is assigned to its nearest microglial centroid.
 
-Voronoi generation itself is not included in this repository. Required inputs, supported contexts and boundary handling are described in [`MATLAB_analysis/docs/VORONOI_ANALYSIS.md`](MATLAB_analysis/docs/VORONOI_ANALYSIS.md).
+Each resulting Voronoi cell therefore represents the local territory associated with one microglial soma.
+
+This representation can be used to quantify several aspects of microglial spatial organization, including:
+
+- the number of valid Voronoi cells;
+- the number of neighboring Voronoi cells;
+- Voronoi cell volume;
+- Voronoi cell surface area;
+- the distance between neighboring microglial centroids.
+
+These measurements provide information about the regularity, heterogeneity and local spacing of the microglial distribution. They can be used to compare microglial spatial organization across experimental conditions, cortical regions or local tissue environments.
+
+When Voronoi analysis is enabled through a custom configuration, the pipeline reads externally generated centroid and Voronoi result files and summarizes the corresponding measurements.
+
+Voronoi tessellation generation itself is not included in this repository.
+
+Required inputs, supported analysis contexts and boundary handling are described in [`MATLAB_analysis/docs/VORONOI_ANALYSIS.md`](MATLAB_analysis/docs/VORONOI_ANALYSIS.md).
 
 ## Dependencies
 
