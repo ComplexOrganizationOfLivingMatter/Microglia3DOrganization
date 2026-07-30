@@ -206,7 +206,7 @@ For every available layer prefix `<LAYER>`, the code produces:
 
 | Exact pattern | Meaning |
 |---|---|
-| `<LAYER>Volume_um3` | Analyzed tissue volume assigned to the layer. |
+| `<LAYER>Volume_um3` | Layer volume used for the miroglia analysis (Microglia analyzed tissue volume assigned to the layer.) |
 | `<LAYER>MicrogliaNumber` | Number of microglial soma instances assigned to the layer. |
 | `<LAYER>MicrogliaDensity_cells_mm3` | Microglial density in the layer. |
 
