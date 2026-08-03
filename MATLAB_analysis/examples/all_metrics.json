@@ -14,34 +14,34 @@
     "file": "/EDIT_THIS_PATH/metadata.xlsx",
     "sheet": 1,
     "columns": {
-      "fileName": "Archivo",
-      "model": "Modelo",
-      "cortexArea": "Zona",
-      "mouse": "IDRaton",
-      "sex": "Sexo",
-      "section": "IDCorte",
-      "image": "IDImage",
-      "bregmaLevel": "BregmaLevel",
-      "layersEnabled": "UseForLayerAnalysis",
-      "cropSizeX": "XCorte2_pxl",
-      "cropSizeY": "Ycorte_pxl",
-      "cropSizeZ": "Zcorte_pxl",
-      "cropStartX": "CoordXCorte2_pxl",
-      "cropStartY": "CoordYCorte_pxl",
-      "cropStartZ": "CoordZCorte_pxl"
+      "fileName": "FileColumnName",
+      "model": "ModelColumnName",
+      "cortexArea": "CortexRegionColumnName",
+      "mouse": "IDMouseColumnName",
+      "sex": "MouseSexColumnName",
+      "section": "IDBrainSectionColumnName",
+      "image": "IDImageColumnName",
+      "bregmaLevel": "BregmaLevelColumnName",
+      "layersEnabled": "UseForLayerAnalysisColumnName",
+      "cropSizeX": "sizeCropXColumnName",
+      "cropSizeY": "sizeCropYColumnName",
+      "cropSizeZ": "sizeCropZColumnName",
+      "cropStartX": "startCropXColumnName",
+      "cropStartY": "startCropYColumnName",
+      "cropStartZ": "startCropZColumnName"
     }
   },
   "resolution": {
     "mode": "excel",
     "xy_um_per_px": 0.4545,
     "z_um_per_px": 0.5669,
-    "xyColumn": "ResolucionXY_um_pxl",
-    "zColumn": "ResolucionZ_um_pxl"
+    "xyColumn": "XYResolutionColumnName",
+    "zColumn": "ZResolutionColumnName"
   },
   "correction": {
     "mode": "excel",
     "value": 1,
-    "column": "Correction_Factor"
+    "column": "correctionFactorColumnName"
   },
   "labels": {
     "models": {
@@ -93,7 +93,7 @@
     },
     "imageSelection": {
       "mode": "excel",
-      "column": "UseForLayerAnalysis",
+      "column": "UseForLayerAnalysisColumnName",
       "selectedFiles": []
     },
     "noInformationLabel": "NoInfo"
@@ -105,12 +105,8 @@
   "spheres": {
     "mode": "generate",
     "radiusPairs_um": [
-      [
-        100
-      ],
-      [
-        100
-      ]
+      100,
+      100
     ]
   },
   "parallel": {
