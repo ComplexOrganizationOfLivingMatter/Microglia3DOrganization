@@ -8,7 +8,6 @@ The pipeline accepts a MATLAB structure, a JSON file or a MAT file containing a 
 |---|---|
 | `config/presets/paper_metrics.json` | Metric selection used for the manuscript-oriented workflow |
 | `config/presets/all_metrics.json` | All standard and advanced metric groups; Voronoi analysis included |
-| `examples/config_template_full.json` | Complete editable configuration with every configurable field |
 | `examples/example_programmatic_config.m` | Example of building a configuration in MATLAB |
 
 For a reproducible paper-oriented run, copy `examples/config_template_full.json`, adapt paths and metadata mappings, and retain the `paper_metrics` metric section.
