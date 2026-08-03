@@ -1,61 +1,47 @@
 {
   "version": "2.3.8",
   "paths": {
-    "masks": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Images/Mask",
-    "microglia": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Images/Microglia",
-    "plaques": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Images/Plaques",
+    "masks": "/EDIT_THIS_PATH/Masks",
+    "microglia": "/EDIT_THIS_PATH/Microglia",
+    "plaques": "/EDIT_THIS_PATH/Plaques",
     "voronoiCentroids": "",
     "voronoiResults": "",
-    "output": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results",
+    "output": "/EDIT_THIS_PATH/Results",
     "dilatedPlaques": "",
-    "existingSphereFolders": [],
-    "data": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/Data",
-    "globalResults": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/Data/General",
-    "layerResults": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/Data/Layer",
-    "plaqueResults": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/Data/Plaque",
-    "sphereResults": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/Data/Spheres",
-    "derived": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/DerivedImages",
-    "derivedDilatedPlaques": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/DerivedImages/DilatedPlaques",
-    "derivedSpheres": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/DerivedImages/Spheres",
-    "derivedLayers": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/DerivedImages/Layers",
-    "derivedADNoPlaques": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/DerivedImages/ADNoPlaques",
-    "derivedADPlaques": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/DerivedImages/ADPlaques",
-    "logs": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/Log",
-    "checkpoints": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/Checkpoints",
-    "configuration": "/home/juanjo/Desktop/elena/TESTMICROGLIA/Results/Configuration"
+    "existingSphereFolders": []
   },
   "metadata": {
-    "file": "/home/juanjo/Desktop/elena/TESTMICROGLIA/metadata.xlsx",
+    "file": "/EDIT_THIS_PATH/metadata.xlsx",
     "sheet": 1,
     "columns": {
-      "fileName": "File",
-      "model": "Model",
-      "cortexArea": "Cortex Region",
-      "mouse": "IDMouse",
-      "sex": "Sex",
-      "section": "IDSection",
-      "image": "",
-      "bregmaLevel": "BregmaGroup",
-      "layersEnabled": "Layers",
-      "cropSizeX": "X_Crop_pxl",
-      "cropSizeY": "Y_Crop_pxl",
-      "cropSizeZ": "Z_Crop_px",
-      "cropStartX": "X_Crop_Start",
-      "cropStartY": "Y_Crop_Start",
-      "cropStartZ": "Z_Crop_Start"
+      "fileName": "FileColumnName",
+      "model": "ModelColumnName",
+      "cortexArea": "CortexRegionColumnName",
+      "mouse": "IDMouseColumnName",
+      "sex": "MouseSexColumnName",
+      "section": "IDBrainSectionColumnName",
+      "image": "IDImageColumnName",
+      "bregmaLevel": "BregmaLevelColumnName",
+      "layersEnabled": "UseForLayerAnalysisColumnName",
+      "cropSizeX": "sizeCropXColumnName",
+      "cropSizeY": "sizeCropYColumnName",
+      "cropSizeZ": "sizeCropZColumnName",
+      "cropStartX": "startCropXColumnName",
+      "cropStartY": "startCropYColumnName",
+      "cropStartZ": "startCropZColumnName"
     }
   },
   "resolution": {
     "mode": "excel",
     "xy_um_per_px": 0.4545,
     "z_um_per_px": 0.5669,
-    "xyColumn": "Resolution_XY",
-    "zColumn": "Resolution_Z"
+    "xyColumn": "XYResolutionColumnName",
+    "zColumn": "ZResolutionColumnName"
   },
   "correction": {
     "mode": "excel",
     "value": 1,
-    "column": "correctionFactor"
+    "column": "correctionFactorColumnName"
   },
   "labels": {
     "models": {
@@ -106,8 +92,8 @@
       ]
     },
     "imageSelection": {
-      "mode": "all",
-      "column": "",
+      "mode": "excel",
+      "column": "UseForLayerAnalysisColumnName",
       "selectedFiles": []
     },
     "noInformationLabel": "NoInfo"
@@ -124,14 +110,14 @@
     ]
   },
   "parallel": {
-    "enabled": true,
+    "enabled": false,
     "numberOfWorkers": 2,
     "modules": {
-      "globalMicroglia": true,
-      "individualPlaques": true,
-      "layers": true,
-      "sphereGeneration": true,
-      "sphereAnalysis": true
+      "globalMicroglia": false,
+      "individualPlaques": false,
+      "layers": false,
+      "sphereGeneration": false,
+      "sphereAnalysis": false
     }
   },
   "analyses": {
@@ -193,8 +179,7 @@
       "layer_plaque_density_plaques_mm3",
       "sphere_volume_um3",
       "sphere_microglia_density_cells_mm3",
-      "nearest_plaque_distance_um",
-      "mean_pairwise_microglia_distance_um"
+      "nearest_plaque_distance_um"
     ],
     "groups": {
       "globalMicroglia": {
@@ -239,8 +224,8 @@
         ]
       },
       "distances": {
-        "enabled": true,
-        "selected": "mean_pairwise_microglia_distance_um"
+        "enabled": false,
+        "selected": []
       },
       "radial": {
         "enabled": false,
