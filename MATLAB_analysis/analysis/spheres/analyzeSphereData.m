@@ -981,9 +981,9 @@ function [tableData, tableSphPlaData] = getNoPlaqueSphereData_optimized_correcte
         coords = [yC(:), xC(:), zC(:)];
         centroidSphere = mean(coords, 1);
 
-        centroidsSphereMatrix = [centroidsSphereMatrix; centroidSphere]; %#ok<AGROW>
+        centroidsSphereMatrix = [centroidsSphereMatrix; centroidSphere];
 
-        polarizationInfo = randomDirectionNull(centroidsMicroglia, centroidSphere, radius, 100, opts);
+        polarizationInfo = randomDirectionNull(microgliaSphere, centroidSphere, radius, 100, opts);
 
         tableData.Pol_rand_mean(row) = double(polarizationInfo.Pol_mean);
         tableData.Pol_rand_std(row) = double(polarizationInfo.Pol_sd);
@@ -1014,7 +1014,7 @@ function [tableData, tableSphPlaData] = getNoPlaqueSphereData_optimized_correcte
         tableData.Pol_atMaxCos(row) = double(polarizationInfo.Pol_atMaxCos);
 
         u_depth = [0, 1, 0];
-        layersPolarizationInfo = depthSuperfMetrics(centroidsMicroglia, centroidSphere, radius, u_depth, opts);
+        layersPolarizationInfo = depthSuperfMetrics(microgliaSphere, centroidSphere, radius, u_depth, opts);
 
         tableData.Align_depth(row) = double(layersPolarizationInfo.Align_depth);
         tableData.Pol_depth(row) = double(layersPolarizationInfo.Pol_depth);
@@ -1042,7 +1042,7 @@ function [tableData, tableSphPlaData] = getNoPlaqueSphereData_optimized_correcte
                     centroidPlaque = centroidsPlaques(nPlaque, :);
                     opts.null = polarizationInfo;
 
-                    polarizationInfoPlaque = computeDirectionalBiasSphere(centroidsMicroglia, centroidSphere, radius, centroidPlaque, opts);
+                    polarizationInfoPlaque = computeDirectionalBiasSphere(microgliaSphere, centroidSphere, radius, centroidPlaque, opts);
                     u_plaques{nPlaque} = polarizationInfoPlaque.u;
 
                     tableSphPlaData.IDImage(row_plaque) = imageData{5};
